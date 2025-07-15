@@ -32,11 +32,33 @@
       padding: 30px;
       text-align: center;
     }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .product-card {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .product-card h3 {
+      margin: 10px 0 5px;
+    }
     footer {
       background: #8e44ad;
       color: white;
       text-align: center;
       padding: 15px;
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -48,13 +70,29 @@
 
   <nav>
     <a href="#">হোম</a>
-    <a href="#">পণ্যসমূহ</a>
+    <a href="#products">পণ্যসমূহ</a>
     <a href="#">যোগাযোগ</a>
   </nav>
 
-  <section>
+  <section id="products">
     <h2>আমাদের পণ্য</h2>
-    <p>আপনার ত্বক ও আত্মসম্মানের যত্নে বিশ্বস্ত নাম — Noore Haya</p>
+    <div class="products">
+      <div class="product-card">
+        <img src="https://i.ibb.co/z8W3Nrb/hijab.jpg" alt="হিজাব">
+        <h3>হিজাব</h3>
+        <p>দাম: ৳২৫০</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.ibb.co/dLbMwV5/facewash.jpg" alt="ফেসওয়াশ">
+        <h3>ফেসওয়াশ</h3>
+        <p>দাম: ৳৪৫০</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.ibb.co/7rSYhX9/serum.jpg" alt="সিরাম">
+        <h3>ভিটামিন সি সিরাম</h3>
+        <p>দাম: ৳৫৫০</p>
+      </div>
+    </div>
   </section>
 
   <footer>
